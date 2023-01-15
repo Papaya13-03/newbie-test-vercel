@@ -1,7 +1,6 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-const socket = io();
 
 if($('#login_qwerty')){
     var username = document.querySelector('#input1');
@@ -66,12 +65,6 @@ if($('#home_qwerty')){
         if(e.key == "Enter") {
             var message = $('#boxx').value;
             $('#boxx').value = "";
-            socket.emit("sendMessage",{content:message});
         }
-    })
-    socket.on("recieveMessage",(data)=>{
-        var listItem = document.createElement('li');
-        listItem.textContent = data.content;
-        $('#message ul').append(listItem);
     })
 }
