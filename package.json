@@ -4,11 +4,11 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "name": "tes",
   "version": "1.0.0",
-  "main": "client.js",
+  "main": "server.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
     "url": "https://github.com/Papaya13-03/newbie-test-vercel/issues"
   },
   "homepage": "https://github.com/Papaya13-03/newbie-test-vercel#readme",
-  "description": ""
+  "description": "",
+  "engines": {
+    "node": "14.x"
+  }
 }
