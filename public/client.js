@@ -41,26 +41,26 @@ if($('#login_qwerty')){
 }
 
 if($('#home_qwerty')){
-    var Token = window.localStorage.getItem("Token");
-    if(!Token){
-        alert("Please login")
-        window.location.href="/login";
-    }
-    else {
-        Token = JSON.parse(Token);
-        var currentDate = new Date();
-        var loginDate = new Date(Token.date);
+    // var Token = window.localStorage.getItem("Token");
+    // if(!Token){
+    //     alert("Please login")
+    //     window.location.href="/login";
+    // }
+    // else {
+    //     Token = JSON.parse(Token);
+    //     var currentDate = new Date();
+    //     var loginDate = new Date(Token.date);
 
-        var diffTime = currentDate - loginDate;
-        diffTime /= 1000; // millisecond to second
-        diffTime /= 60;   // second to minute
-        diffTime /= 60;   // minute to hour
+    //     var diffTime = currentDate - loginDate;
+    //     diffTime /= 1000; // millisecond to second
+    //     diffTime /= 60;   // second to minute
+    //     diffTime /= 60;   // minute to hour
         
-        if(diffTime >= 1) {/// expired
-            window.localStorage.removeItem("Token");
-            window.location.href = "/login";
-        }
-    }
+    //     if(diffTime >= 1) {/// expired
+    //         window.localStorage.removeItem("Token");
+    //         window.location.href = "/login";
+    //     }
+    // }
     $('#boxx').addEventListener('keydown',(e)=>{
         if(e.key == "Enter") {
             var message = $('#boxx').value;
