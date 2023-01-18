@@ -16,8 +16,8 @@
             "dest":"server.js"
         },
         {
-            "src": "/",
-            "dest": "public/home.html"
+            "src": "/client.js",
+            "dest": "public/client.js"
         }
     ]
 }
