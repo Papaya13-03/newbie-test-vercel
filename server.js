@@ -3,6 +3,7 @@ const http = require('http');
 const app = express();
 const server = http.createServer(app);
 
+app.use(express.static('public'));
 
 app.get('/',(req, res)=>{
     res.sendFile(__dirname+'/public/home.html');
